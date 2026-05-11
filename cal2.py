@@ -1,3 +1,2 @@
-print("hello")
-prin("Hello")
-print("Hello"
+print("Hello World")
+# other code lines remain unchanged
