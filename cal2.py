@@ -1,2 +1,3 @@
 print("Hello World")
-# other code lines remain unchanged
+# Example usage:
+print("This is a test")
