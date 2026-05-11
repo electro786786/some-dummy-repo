@@ -1,3 +1,3 @@
-print("hello")
-prin("Hello")
-print("Hello"
+print("Hello World")
+# Example usage:
+print("This is a test")
