@@ -1,9 +1,6 @@
 #!/usr/bin/python3
 
-def main():
-    print('hello world')
-    print('World')
-    print('world')
-
-if __name__ == '__main__':
-    main()
+print('Hello World')
+print('Hello World')
+for _ in range(2):
+    print('Hello World')
