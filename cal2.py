@@ -1,12 +1,17 @@
-import os
+import sys
 
-# Follow PEP 8 naming convention
-def calculate_something(input_value):
+def calculate_result(input_value):
     try:
-        # Restore the original calculation logic
         result = input_value * 2
         return result
-    except Exception as e:
-        # Handle potential exceptions
-        print(f"An error occurred: {e}")
-        return None
+    except ValueError:
+        print("Invalid input value")
+        sys.exit(1)
+
+def main():
+    input_value = 5
+    result = calculate_result(input_value)
+    print(result)
+
+if __name__ == "__main__":
+    main()
