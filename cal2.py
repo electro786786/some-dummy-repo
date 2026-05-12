@@ -1,32 +1,23 @@
-import math
-
 def calculate_distance(a, b):
     """
-    Calculate the distance between two points.
+    Calculate the Euclidean distance between two points.
 
     Args:
         a (float): The x-coordinate of the first point.
         b (float): The y-coordinate of the second point.
 
     Returns:
-        float: The distance between the two points.
+        float: The Euclidean distance between the two points.
 
     Raises:
         ValueError: If a is zero
     """
     if a == 0:
-        raise ValueError("a cannot be zero")
+        raise ValueError("Cannot calculate distance when a is zero")
 
-    # Calculate the square root of the product of a and b
-    sqrt_product = math.sqrt(a * b)
-
-    # Calculate the distance
-    distance = sqrt_product
-
+    distance_squared = a ** 2 + b ** 2
+    distance = distance_squared ** 0.5
     return distance
 
-# Example usage
-a = 4
-b = 16
-distance = calculate_distance(a, b)
-print(distance)
+# Example usage:
+print(calculate_distance(3, 4))
