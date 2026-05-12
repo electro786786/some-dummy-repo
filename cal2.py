@@ -1,1 +1,1 @@
-print('Hello, World!')
+try:\n    print("Hello, World!")\nexcept Exception as e:\n    print(f"An error occurred: {e}")
