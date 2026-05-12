@@ -1,15 +1,15 @@
 import logging
 
-logging.basicConfig(level=logging.DEBUG)
+logging.basicConfig(level=logging.INFO)
 
 def calculate_something(a, b):
+    if not isinstance(a, (int, float)) or not isinstance(b, (int, float)):
+        raise ValueError('Both a and b must be numbers')
     if b == 0:
         raise ValueError('Cannot divide by zero')
-    return a / b
+    result = a / b
+    return result
 
-def main():
-    result = calculate_something(10, 2)
-    logging.debug('Result: %s', result)
-
-if __name__ == '__main__':
-    main()
+# Example usage
+result = calculate_something(10, 2)
+print(result)
