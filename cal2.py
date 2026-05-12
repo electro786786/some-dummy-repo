@@ -1,23 +1,35 @@
 import logging
+import sys
 
-logging.basicConfig(level=logging.INFO)
+# Set the logging level to DEBUG to catch any potential issues
+logging.basicConfig(level=logging.DEBUG)
 
 def calculate_something(a, b):
-    if b == 0:
-        raise ValueError('b cannot be zero')
+    """Calculate something based on a and b.
+
+    Args:
+        a (int): The first number.
+        b (int): The second number.
+
+    Returns:
+        int: The result of the calculation.
+
+    Raises:
+        ValueError: If a is zero."
     if a == 0:
-        raise ValueError('a cannot be zero')
-    # rest of the function remains the same
+        raise ValueError("a cannot be zero")
 
-def main():
-    a = 10
-    b = 20
-    try:
-        result = calculate_something(a, b)
-    except ValueError as e:
-        logging.error(f'Error: {e}')
-    else:
-        logging.info(f'Result: {result}')
+    # Check for very large numbers and raise a ValueError if necessary
+    if a > 1e10 or b > 1e10:
+        raise ValueError("a or b is too large")
 
-if __name__ == '__main__':
-    main()
+    result = a + b
+    logging.debug(f"Result: {result}")
+    return result
+
+# Example usage
+try:
+    result = calculate_something(5, 10)
+    print(result)
+except ValueError as e:
+    logging.error(f"Error: {e}")
