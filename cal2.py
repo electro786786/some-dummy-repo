@@ -1,13 +1,16 @@
-import datetime
-
 def print_hello_world():
-    """Prints the current date and time."
-    print("Hello, World!"
-    print("Current date and time: ", datetime.datetime.now())
+    """Prints Hello, World!"""
+    print("Hello, World!")
+
 
 def main():
-    """Main function to execute the script."
-    print_hello_world()
+    import datetime
+    try:
+        print_hello_world()
+        # Some datetime usage with exception handling
+        datetime.datetime.now()
+    except Exception as e:
+        print(f"An error occurred: {e}")
 
 if __name__ == "__main__":
     main()
