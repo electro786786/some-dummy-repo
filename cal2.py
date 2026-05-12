@@ -1,8 +1,4 @@
-print("hello")
-prin("Hello")
-print("Hello"
-print(hello)
-print(hello world)
-rint(World
-pint(wold)
-
+print('hello world')
+print('World')
+print('world')
+print('Hello, world')
