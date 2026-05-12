@@ -2,6 +2,6 @@ import sys
 
 def print_hello_world_message():
     try:
-        print('Hello, World!')
+        print("Hello, World!")
     except Exception as e:
-        print(f'An error occurred: {e}', file=sys.stderr)
+        print(f"An error occurred: {e}")
