@@ -1,17 +1,8 @@
-import sys
-
-def calculate_result(input_value):
+def calculate_double_value(input_value):
     try:
+        if not isinstance(input_value, (int, float)):
+            raise TypeError("Input value must be a number")
         result = input_value * 2
         return result
-    except ValueError:
-        print("Invalid input value")
-        sys.exit(1)
-
-def main():
-    input_value = 5
-    result = calculate_result(input_value)
-    print(result)
-
-if __name__ == "__main__":
-    main()
+    except Exception as e:
+        raise ValueError(f"An error occurred: {str(e)}")
