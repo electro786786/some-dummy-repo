@@ -1,7 +1,5 @@
-import sys
-
-def print_hello_world_message():
+def print_hello_world(message='Hello, World!'):
     try:
-        print('Hello, World!')
+        print(message)
     except Exception as e:
-        print(f'An error occurred: {e}', file=sys.stderr)
+        print(f'An error occurred: {e}')
