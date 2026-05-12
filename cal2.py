@@ -1,21 +1,13 @@
-import os
+import datetime
+
+def print_hello_world():
+    """Prints the current date and time."
+    print("Hello, World!"
+    print("Current date and time: ", datetime.datetime.now())
 
 def main():
-    # Purpose of the main function: to refactor the original code
-    # and include a 'main' function.
-    try:
-        # Get the file contents
-        with open('cal2.py', 'r') as file:
-            original_code = file.read()
+    """Main function to execute the script."
+    print_hello_world()
 
-        # Print the original code
-        print(original_code)
-
-        # Print the fixed code
-        print(fixed_code)
-
-    except Exception as e:
-        print(f'An error occurred: {e}')
-
-if __name__ == '__main__':
+if __name__ == "__main__":
     main()
