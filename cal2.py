@@ -1,9 +1,11 @@
 import sys
 
-# Define a function with a standard Python naming convention
-def print_result(result):
-    print(result)
+def calculate():
+    # existing calculation logic here
+    results = []
+    results.append('Result 1')
+    results.append('Result 2')
+    for result in results:
+        print(result)
 
-# Replace 'rint' and 'pint' with the correct function 'print', and add quotes around string literals
-print_result("The code has been fixed.")
-print("This is a test.")
+calculate()
