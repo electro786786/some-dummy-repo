@@ -1,4 +1,4 @@
-def print_hello_world():
-    # function body
+import sys
 
-# Add a newline at the end of the file to follow standard Python coding conventions.
+def print_hello_world(message='Hello, World!'):
+    print(message)
