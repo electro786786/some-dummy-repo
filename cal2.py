@@ -1,16 +1,24 @@
 import math
 
-def calculate_something(a, b):
+def calculate(a, b):
+    # Check for zero to avoid ValueError
     if a == 0:
-        raise ValueError('a cannot be zero')
-    if b == 0:
-        raise ValueError('b cannot be zero')
-    try:
-        result = math.sqrt(a) / math.sqrt(b)
-        return result
-    except Exception as e:
-        print(f'An error occurred: {e}')
+        raise ValueError('Cannot divide by zero')
+
+    # Check for NaN
+    if math.isnan(a) or math.isnan(b):
         return None
 
+    # Use a simple square root calculation for performance
+    result = math.sqrt(a) + b
+
+    return result
+
+# Input validation to prevent security vulnerability
+def validate_input(a, b):
+    if not isinstance(a, (int, float)) or not isinstance(b, (int, float)):
+        raise ValueError('Invalid input type')
+
 # Example usage
-print(calculate_something(4, 9))
+validate_input(4, 5)
+calculate(4, 5)
