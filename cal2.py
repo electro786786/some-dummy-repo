@@ -1,16 +1,13 @@
-import logging
+import sys
 
-# Define a function to handle printing messages
-def print_message(message):
-    logging.info(message)
+class Printer:
+    def __init__(self):
+        pass
+    def print_message(self, message):
+        print(message)
 
-# Define a function to handle error messages
-def print_error(message):
-    logging.error(message)
-
-# Set up logging configuration
-logging.basicConfig(level=logging.INFO)
+# Create an instance of the Printer class
+printer = Printer()
 
 # Example usage:
-print_message("This is an info message")
-print_error("This is an error message")
+printer.print_message("Hello, World!")
