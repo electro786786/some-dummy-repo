@@ -1,13 +1,14 @@
-import sys
+import calendar
 
-try:
-    # Code that may raise an exception
-    pass
-except ValueError as e:
-    # Handle the specific exception
-    print(f"Error: {e}")
-except TypeError as e:
-    # Handle the specific exception
-    print(f"Error: {e}")
+def get_calendar(year, month):
+    try:
+        cal = calendar.monthcalendar(year, month)
+    except ValueError as e:
+        print(f"Invalid date: {e}")
+        return None
+    return cal
 
-# Add a newline at the end of the file
+# Example usage:
+year = 2024
+month = 9
+print(get_calendar(year, month))
