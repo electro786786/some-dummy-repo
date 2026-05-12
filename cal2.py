@@ -1,5 +1,6 @@
-def print_function():
-  print('Hello World')
+import sys
 
-print_function()
-print('This is a test')
+def print_hello_world(message='Hello, World!'):
+    print(message)
+
+print_hello_world()
