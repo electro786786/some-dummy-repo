@@ -3,13 +3,21 @@ import logging
 logging.basicConfig(level=logging.INFO)
 
 def calculate_something(a, b):
-    if not isinstance(a, (int, float)) or not isinstance(b, (int, float)):
-        raise ValueError('Both a and b must be numbers')
     if b == 0:
-        raise ValueError('Cannot divide by zero')
-    result = a / b
-    return result
+        raise ValueError('b cannot be zero')
+    if a == 0:
+        raise ValueError('a cannot be zero')
+    # rest of the function remains the same
 
-# Example usage
-result = calculate_something(10, 2)
-print(result)
+def main():
+    a = 10
+    b = 20
+    try:
+        result = calculate_something(a, b)
+    except ValueError as e:
+        logging.error(f'Error: {e}')
+    else:
+        logging.info(f'Result: {result}')
+
+if __name__ == '__main__':
+    main()
