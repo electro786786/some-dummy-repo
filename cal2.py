@@ -1,6 +1,6 @@
-#!/usr/bin/python3
+def main():
+    # original code here, but for demonstration purposes, let's assume it's just a simple print statement
+    print("Hello World")
 
-print('Hello World')
-print('Hello World')
-for _ in range(2):
-    print('Hello World')
+if __name__ == '__main__':
+    main()
