@@ -1,11 +1,6 @@
-try:
-    with open('example.txt', 'r') as file:
-        content = file.read()
-except FileNotFoundError:
-    print("The file does not exist.")
-except Exception as e:
-    print(f"An unexpected error occurred: {e}")
-else:
-    print(content)
-finally:
-    file.close()
+with open('example_file.txt', 'r') as example_file:
+    content = example_file.readlines()
+    # Process the content line by line or in chunks
+    for line in content:
+        # Example processing
+        print(line.strip())
