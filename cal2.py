@@ -1,16 +1,17 @@
 import logging
 
-# Define a function to handle printing messages
-def print_message(message):
-    logging.info(message)
-
-# Define a function to handle error messages
-def print_error(message):
-    logging.error(message)
-
-# Set up logging configuration
+# Set the logging level based on the environment or command-line arguments
 logging.basicConfig(level=logging.INFO)
 
-# Example usage:
-print_message("This is an info message")
-print_error("This is an error message")
+# Rename functions to 'log_info' and 'log_error' for better clarity
+def log_info(message):
+    try:
+        logging.info(message)
+    except Exception as e:
+        print(f"Error logging info: {e}")
+
+def log_error(message):
+    try:
+        logging.error(message)
+    except Exception as e:
+        print(f"Error logging error: {e}")
