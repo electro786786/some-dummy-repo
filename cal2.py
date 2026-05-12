@@ -1,15 +1,16 @@
-import sys
+import math
 
-# Function to calculate something
 def calculate_something(a, b):
+    if a == 0:
+        raise ValueError('a cannot be zero')
     if b == 0:
         raise ValueError('b cannot be zero')
-    if a > 1e10 or b > 1e10:
-        raise ValueError('a or b is too large')
-    # Rest of the function remains the same
+    try:
+        result = math.sqrt(a) / math.sqrt(b)
+        return result
+    except Exception as e:
+        print(f'An error occurred: {e}')
+        return None
 
 # Example usage
-try:
-    calculate_something(10, 20)
-except ValueError as e:
-    print(e)
+print(calculate_something(4, 9))
