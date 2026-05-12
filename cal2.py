@@ -1,21 +1,28 @@
-import os
+import logging
 
-def calculate_something(data):
-    # Implement a meaningful calculation here
-    return data
+# Configure logging
+logging.basicConfig(level=logging.INFO)
 
-try:
-    # Main function is not necessary, but added for exception handling
-    def main():
-        pass
+def calculate_something(input_data):
+    try:
+        # Perform meaningful calculation
+        result = input_data * 2
+        return result
+    except Exception as e:
+        logging.error(f'An error occurred: {e}')
+        return None
 
-    main()
-except Exception as e:
-    print(f'An error occurred: {e}')
-
-# Function names are not descriptive, but added for context
-def function1():
+def main():
+    # Remove this function as it's not necessary
     pass
 
-def function2():
-    pass
+# Rename function1 and function2 to something more descriptive
+def perform_calculation(input_data):
+    return calculate_something(input_data)
+
+# Example usage
+if __name__ == '__main__':
+    input_data = 5
+    result = perform_calculation(input_data)
+    if result is not None:
+        logging.info(f'Result: {result}')
