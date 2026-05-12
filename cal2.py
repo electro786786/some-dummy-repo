@@ -1,15 +1,9 @@
 import logging
 
-logging.basicConfig(format='%(asctime)s - %(name)s - %(levelname)s - %(message)s', level=logging.INFO)
+logger = logging.getLogger(__name__)
 
-def log_info(message):
-    try:
-        logging.info(message)
-    except logging.exceptions.LoggingError as e:
-        print(f'Error logging info: {e}')
+def log_info_message(message):
+    logger.info(message)
 
-def log_error(message):
-    try:
-        logging.error(message)
-    except logging.exceptions.LoggingError as e:
-        print(f'Error logging error: {e}')
+def log_error_message(message):
+    logger.error(message)
