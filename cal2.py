@@ -1,28 +1,32 @@
 import math
 
-def calculate_ratio(a, b):
+def calculate_distance(a, b):
     """
-    Calculate the ratio of the square root of a to the square root of b.
+    Calculate the distance between two points.
 
     Args:
-        a (float): The first number.
-        b (float): The second number.
+        a (float): The x-coordinate of the first point.
+        b (float): The y-coordinate of the second point.
 
     Returns:
-        float: The ratio of the square root of a to the square root of b.
+        float: The distance between the two points.
 
     Raises:
-        ValueError: If b is zero.
+        ValueError: If a is zero
     """
-    if b == 0:
-        raise ValueError("Cannot divide by zero")
+    if a == 0:
+        raise ValueError("a cannot be zero")
 
-    sqrt_a = math.sqrt(a)
-    sqrt_b = math.sqrt(b)
+    # Calculate the square root of the product of a and b
+    sqrt_product = math.sqrt(a * b)
 
-    ratio = sqrt_a / sqrt_b
+    # Calculate the distance
+    distance = sqrt_product
 
-    return ratio
+    return distance
 
-# Example usage:
-print(calculate_ratio(4, 9))
+# Example usage
+a = 4
+b = 16
+distance = calculate_distance(a, b)
+print(distance)
