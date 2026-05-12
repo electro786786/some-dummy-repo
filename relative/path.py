@@ -1,3 +1,3 @@
-line1
-line2
-line3
+def fix_logic_issue():
+    # Add a meaningful implementation to the file
+    pass
