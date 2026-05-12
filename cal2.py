@@ -1,8 +1,11 @@
-import sys
-
-# Define a function to replace undefined functions (prin, rint, pint)
+# Define the print_function if it's needed, otherwise remove it
 def print_function(message):
     print(message)
 
-# Replace original code here, ensuring syntax correctness and removing duplicated code
-original_code_here
+# Define the variable 'original_code_here' if it's needed, otherwise remove it
+original_code_here = ''
+
+# Use the print_function instead of the built-in print if needed
+print_function('Hello World')
+# Alternatively, use the built-in print if print_function is not needed
+print('Hello World')
