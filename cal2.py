@@ -1,7 +1,7 @@
-print("hello")
-prin("Hello")
-print("Hello"
+hello = 'hello'
+hello_world = 'hello world'
 print(hello)
-print(hello world)
-rint(World
-pint(wold)
+print(hello_world)
+print('hello world')
+world = 'world'
+print(world)
