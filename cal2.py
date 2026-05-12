@@ -1,13 +1,11 @@
-import sys
+import logging
 
 class Printer:
     def __init__(self):
-        pass
+        self.logger = logging.getLogger(__name__)
+        self.logger.setLevel(logging.INFO)
+        self.handler = logging.StreamHandler()
+        self.handler.setFormatter(logging.Formatter('%(asctime)s - %(name)s - %(levelname)s - %(message)s'))
+        self.logger.addHandler(self.handler)
     def print_message(self, message):
-        print(message)
-
-# Create an instance of the Printer class
-printer = Printer()
-
-# Example usage:
-printer.print_message("Hello, World!")
+        self.logger.info(message)
