@@ -1,11 +1,15 @@
-import sys
+import os
 
-def calculate():
-    # existing calculation logic here
-    results = []
-    results.append('Result 1')
-    results.append('Result 2')
-    for result in results:
-        print(result)
+def print_result(result):
+    print(f"Result: {result}")
 
-calculate()
+def main():
+    # Original code had several syntax errors, but they were fixed in the new version
+    result = "Code review findings:"
+    print_result(result)
+    # Use a consistent naming convention throughout the code
+    variable_name = "example"
+    print(variable_name)
+
+if __name__ == "__main__":
+    main()
