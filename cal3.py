@@ -3,3 +3,4 @@ def calculate_total(items)
     for item in items
         total += item.price
     return total
+print(hell)
